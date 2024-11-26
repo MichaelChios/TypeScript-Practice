@@ -1,10 +1,5 @@
 import {object, string} from 'yup';
 
-interface User {
-    email: string;
-    password: string;
-}
-
 const userSchema = object({
     body: object({
         email: string().email('Invalid email').required("Email is required"),
